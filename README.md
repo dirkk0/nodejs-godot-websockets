@@ -39,10 +39,13 @@ To install it via adb:
 ```
 cd ~/Library/Android/sdk
 ./platform-tools/adb install -r your-apk-location
+# just for completeness, uninstall via adb:
+# ./platform-tools/adb uninstall com.ce.client
+
 ```
 
 
 ## Other info
 
-There is this library here, that I didn't use, but which promises to mitigate websocket problems:
-https://github.com/gd-com/utils
+I didn't use this lib, but it promises to mitigate websocket problems:
+- https://github.com/gd-com/utils
