@@ -20,3 +20,8 @@ The server needs to be running when you start the app.
 It's important that you set android.permission.INTERNET to true which is here:
 ![alt text](export_settings.png "important.")
 
+
+## Other info
+
+There is this library here, that I didn't use, but which promises to mitigate websocket problems:
+https://github.com/gd-com/utils
