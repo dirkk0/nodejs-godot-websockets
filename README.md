@@ -16,9 +16,30 @@ Here's how it looks.
 
 The server needs to be running when you start the app.
 
+## Client APK
+
+To export the APK, set the 'package/unique name' (or leave it as com.ce.client) and add the keys; there are default debug keys here:
+
+- Windows Vista, 7, 8: C:\Users\.android\
+- Linux/OS X : ~/.android/
+
+with user/pass: androiddebugkey/android
 
 It's important that you set android.permission.INTERNET to true which is here:
 ![alt text](export_settings.png "important.")
+
+To monitor the app, you need Android Studio installed:
+
+```
+cd ~/Library/Android/sdk
+./platform-tools/adb shell "logcat | grep 'godot'"
+```
+
+To install it via adb:
+```
+cd ~/Library/Android/sdk
+./platform-tools/adb install -r your-apk-location
+```
 
 
 ## Other info
