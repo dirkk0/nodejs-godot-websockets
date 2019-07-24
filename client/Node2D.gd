@@ -3,10 +3,10 @@ extends Node2D
 
 var ws = null
 
-var time_start = 0
-var time_now = 0
-
 func _ready():
+	_connect()
+
+func _connect():
     ws = WebSocketClient.new()
     ws.connect("connection_established", self, "_connection_established")
     ws.connect("connection_closed", self, "_connection_closed")
@@ -38,9 +38,13 @@ func _process(_delta):
             var test = ws.get_peer(1).get_packet()
             print('recieve %s' % test.get_string_from_ascii ())
 
-func _on_Button_button_down():
+func _on_btn_ping_pressed():
     var str_time = str(OS.get_unix_time())
     print("send time : " + str_time)
 
     if ws.get_peer(1).is_connected_to_host():
         ws.get_peer(1).put_var(str_time)
+
+
+func _on_btn_connect_pressed():
+	_connect()

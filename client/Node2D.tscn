@@ -5,11 +5,18 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 102.0
-margin_top = 104.0
-margin_right = 211.0
-margin_bottom = 132.0
+[node name="btn_connect" type="Button" parent="."]
+margin_left = 108.0
+margin_top = 95.0
+margin_right = 208.0
+margin_bottom = 124.0
+text = "connect"
+
+[node name="btn_ping" type="Button" parent="."]
+margin_left = 101.0
+margin_top = 153.0
+margin_right = 210.0
+margin_bottom = 181.0
 text = "ping"
 
 [node name="LineEdit" type="LineEdit" parent="."]
@@ -21,4 +28,5 @@ margin_right = 255.5
 margin_bottom = 60.0
 text = "ws://192.168.6.218:5000"
 
-[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="pressed" from="btn_connect" to="." method="_on_btn_connect_pressed"]
+[connection signal="pressed" from="btn_ping" to="." method="_on_btn_ping_pressed"]
