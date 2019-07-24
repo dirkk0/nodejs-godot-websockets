@@ -14,7 +14,7 @@ Here's how it looks.
 
 ![alt text](screenshot.png "yes, it's not pretty.")
 
-The server needs to be running when you start the app.
+Enter the correct ip and start the connection.
 
 ## Client APK
 
